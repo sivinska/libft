@@ -6,7 +6,7 @@
 #    By: sivinska <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/15 15:21:02 by sivinska          #+#    #+#              #
-#    Updated: 2018/04/19 18:29:53 by sivinska         ###   ########.fr        #
+#    Updated: 2018/04/19 18:43:09 by sivinska         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c\
 	ft_putendl_fd.c ft_putnbr_fd.c ft_lstnew.c ft_lstdelone.c ft_lstdel.c\
 	ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_convert_to_base.c\
 	ft_convert_to_base_long.c ft_str_to_upper.c ft_strrev.c\
-	ft_get_nbr_len.c
+	ft_get_nbr_len.c ft_putnbr_unsigned.c
 
 OBJ = $(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: sivinska <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:29 by sivinska          #+#    #+#             */
-/*   Updated: 2018/04/19 18:27:20 by sivinska         ###   ########.fr       */
+/*   Updated: 2018/04/19 18:43:50 by sivinska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,4 +90,5 @@ char				*ft_convert_to_base_long(long int nbr, int base);
 char				*ft_str_to_upper(char *str);
 char				*ft_strrev(char *str);
 int					ft_get_nbr_len(int n);
+void				ft_putnbr_unsigned(unsigned int nbr);
 #endif
