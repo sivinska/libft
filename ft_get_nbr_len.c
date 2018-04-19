@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_get_nbr_len.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sivinska <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/20 14:45:44 by sivinska          #+#    #+#             */
-/*   Updated: 2018/02/02 15:28:47 by sivinska         ###   ########.fr       */
+/*   Created: 2018/04/16 14:33:42 by sivinska          #+#    #+#             */
+/*   Updated: 2018/04/19 18:25:17 by sivinska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+int		ft_get_nbr_len(int n)
 {
-	int		len;
-	char	*str;
+	int				ret;
+	unsigned int	nbr;
 
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
-	len = ft_strlen(s1) + ft_strlen(s2);
-	str = (char*)malloc(sizeof(*str) * (len + 1));
-	if (str == 0)
-		return (NULL);
-	ft_strcpy(str, s1);
-	ft_strcat(str, s2);
-	return (str);
+	ret = 1;
+	if (n < 0)
+		nbr = -n;
+	else
+		nbr = n;
+	while (nbr /= 10)
+		ret++;
+	return (ret);
 }

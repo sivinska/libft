@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_str_to_upper.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sivinska <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/20 14:45:44 by sivinska          #+#    #+#             */
-/*   Updated: 2018/02/02 15:28:47 by sivinska         ###   ########.fr       */
+/*   Created: 2018/04/19 18:20:38 by sivinska          #+#    #+#             */
+/*   Updated: 2018/04/19 18:21:42 by sivinska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char		*ft_str_to_upper(char *str)
 {
-	int		len;
-	char	*str;
+	char 	*cpy;
 
-	if (s1 == NULL || s2 == NULL)
+	cpy = str;
+	if (!cpy)
 		return (NULL);
-	len = ft_strlen(s1) + ft_strlen(s2);
-	str = (char*)malloc(sizeof(*str) * (len + 1));
-	if (str == 0)
-		return (NULL);
-	ft_strcpy(str, s1);
-	ft_strcat(str, s2);
+	while (*cpy)
+	{
+		*cpy = ft_toupper(*cpy);
+		cpy++;
+	}
 	return (str);
 }
