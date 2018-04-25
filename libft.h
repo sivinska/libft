@@ -6,7 +6,7 @@
 /*   By: sivinska <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:29 by sivinska          #+#    #+#             */
-/*   Updated: 2018/04/19 18:43:50 by sivinska         ###   ########.fr       */
+/*   Updated: 2018/04/25 13:21:35 by sivinska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,4 +91,11 @@ char				*ft_str_to_upper(char *str);
 char				*ft_strrev(char *str);
 int					ft_get_nbr_len(int n);
 void				ft_putnbr_unsigned(unsigned int nbr);
+int					ft_putchar_ret(char c);
+void				ft_putchar_unicode(unsigned int c);
+void				ft_putnbr_longlong(long long n);
+int					ft_unicode_len(unsigned int c);
+unsigned long long	ft_atoi_longlong(const char *str);
+int					ft_pow(int nbr, int times);
+
 #endif
