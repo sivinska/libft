@@ -6,16 +6,16 @@
 /*   By: sivinska <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 14:33:42 by sivinska          #+#    #+#             */
-/*   Updated: 2018/04/19 18:25:17 by sivinska         ###   ########.fr       */
+/*   Updated: 2018/04/25 15:34:44 by sivinska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_get_nbr_len(int n)
+int		ft_get_nbr_len(long long int n)
 {
 	int				ret;
-	unsigned int	nbr;
+	long long int	nbr;
 
 	ret = 1;
 	if (n < 0)
