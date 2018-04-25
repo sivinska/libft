@@ -6,17 +6,19 @@
 /*   By: sivinska <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 18:13:03 by sivinska          #+#    #+#             */
-/*   Updated: 2018/04/25 13:34:43 by sivinska         ###   ########.fr       */
+/*   Updated: 2018/04/25 15:24:38 by sivinska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		base_lenght(unsigned int nbr, int base)
+static int		base_lenght(unsigned long long nbr, int base)
 {
 	int		i;
 
 	i = 0;
+	if (nbr == 0)
+		return (1);
 	while (nbr != 0)
 	{
 		i++;
@@ -46,7 +48,7 @@ static char		*generate_base(int base)
 	return (ret);
 }
 
-char			*ft_convert_to_base(unsigned int nbr, int base)
+char			*ft_convert_to_base(unsigned long long nbr, int base)
 {
 	char	*ret;
 	char	*charset;
@@ -57,8 +59,8 @@ char			*ft_convert_to_base(unsigned int nbr, int base)
 	if (base < 2 || base > 36)
 		return (NULL);
 	len = base_lenght(nbr, base);
-	charset = generate_base(base);
-	if (!(ret = (char *)malloc(sizeof(char) * len + 1)))
+	if (!(ret = (char *)malloc(sizeof(char) * len + 1)) ||
+			(!(charset = generate_base(base))))
 		return (NULL);
 	if (nbr == 0)
 		ret[0] = charset[0];
