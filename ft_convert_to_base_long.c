@@ -6,7 +6,7 @@
 /*   By: sivinska <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 18:16:48 by sivinska          #+#    #+#             */
-/*   Updated: 2018/04/19 18:19:57 by sivinska         ###   ########.fr       */
+/*   Updated: 2018/04/25 13:35:08 by sivinska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ static int		base_lenght(long int nbr, int base)
 	return (i);
 }
 
-static char*	generate_base(int base)
+static char		*generate_base(int base)
 {
-	char		*ret;
-	int 		i;
+	char	*ret;
+	int		i;
 
 	ret = ft_strnew(base);
 	if (!ret)
@@ -46,7 +46,7 @@ static char*	generate_base(int base)
 	return (ret);
 }
 
-char		*ft_convert_to_base_long(long int nbr, int base)
+char			*ft_convert_to_base_long(long int nbr, int base)
 {
 	char	*ret;
 	char	*charset;
@@ -57,21 +57,19 @@ char		*ft_convert_to_base_long(long int nbr, int base)
 	if (base < 2 || base > 36)
 		return (NULL);
 	len = base_lenght(nbr, base);
+	charset = generate_base(base);
 	if (!(ret = (char *)malloc(sizeof(char) * len + 1)))
 		return (NULL);
-	charset = generate_base(base);
-	if (!charset)
-		return (NULL);
 	i = len - 1;
+	if (nbr == 0)
+		ret[0] = charset[0];
 	while (nbr != 0)
 	{
 		tmp = nbr % base;
 		nbr /= base;
-		ret[i] = charset[tmp];
-		i--;
+		ret[i--] = charset[tmp];
 	}
 	ret[len] = '\0';
-	if (charset)
-		free(charset);
+	free(charset);
 	return (ret);
 }

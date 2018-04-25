@@ -6,7 +6,7 @@
 /*   By: sivinska <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 18:20:38 by sivinska          #+#    #+#             */
-/*   Updated: 2018/04/19 18:21:42 by sivinska         ###   ########.fr       */
+/*   Updated: 2018/04/25 13:27:01 by sivinska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char		*ft_str_to_upper(char *str)
 {
-	char 	*cpy;
+	char	*cpy;
 
 	cpy = str;
 	if (!cpy)
