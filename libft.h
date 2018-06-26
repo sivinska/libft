@@ -6,7 +6,7 @@
 /*   By: sivinska <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:29 by sivinska          #+#    #+#             */
-/*   Updated: 2018/04/25 15:48:56 by sivinska         ###   ########.fr       */
+/*   Updated: 2018/06/26 13:53:50 by sivinska         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include "ft_printf.h"
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
